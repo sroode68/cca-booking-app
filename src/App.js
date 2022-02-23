@@ -1,14 +1,23 @@
-import Announcements from './AnnouncementScreen';
 import './index.css';
-import useFetch from './useFetch'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Home from './Home';
+import Room1 from './Room1';
 
-//npx json-server --watch data/db.json --port 7000
 function App() {
-  const {data: announcements} = useFetch('http://localhost:7000/announcements');
+
   return (
-    <div className="App">
-      {announcements && <Announcements announcements={announcements}/>}
-    </div>
+    <Router>
+      <div className='App'>
+        <Switch>
+          <Route exact path ="/">
+            <Home />
+          </Route>
+          <Route path ="/room1">
+            <Room1/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

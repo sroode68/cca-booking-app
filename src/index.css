@@ -30,8 +30,18 @@
     margin: 3px;
     background-color:#5796f3;
     border:2px solid black;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 200px;
+    padding-right: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.room1{
+    padding: 20px;
+    align-items: left;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+
