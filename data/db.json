@@ -1,14 +1,9 @@
 {
   "announcements": [
       {
-          "date": "2/14/2022",
-          "body": "Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123 Testing Testing 123",
+          "date": "2/25/2022",
+          "body": "The CCA study rooms will be closing early at 2:30 PM on Friday February 25th",
           "id": "1"
-      },
-      {
-        "date": "2/15/2022",
-        "body": "Testing Testing 123 Testing Testing 123 Testing Testing 123",
-        "id": "2"
       }
   ]
 }

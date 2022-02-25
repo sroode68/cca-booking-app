@@ -3,7 +3,7 @@ const AnnouncementScreen = ( {announcements} ) => {
         <div className='announcements'>
             <h1>Announcements:</h1>
             {announcements.map((announcements) => (
-                <div className="announcement-listing">
+                <div>
                     <h2>{announcements.date}</h2>
                     <h3>{announcements.body}</h3>
                 </div>

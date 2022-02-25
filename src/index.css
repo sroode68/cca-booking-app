@@ -36,9 +36,17 @@
     padding-bottom: 5px;
 }
 
-.room{
+.room1{
     padding: 20px;
     align-items: left;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.room2{
+    padding: 20px;
+    align-items: right;
     max-width: 1500px;
     margin: 0 auto;
     text-decoration: none;
