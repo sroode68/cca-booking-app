@@ -26,7 +26,7 @@ function App() {
           </Route> 
           <Route path ="/room4">
             <Room4/>
-          </Route>            
+          </Route>           
         </Switch>
       </div>
     </Router>

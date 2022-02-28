@@ -1,7 +1,9 @@
 const AnnouncementScreen = ( {announcements} ) => {
     return(
+        
         <div className='announcements'>
             <h1>Announcements:</h1>
+            <div className='announcement-listing'>
             {announcements.map((announcements) => (
                 <div>
                     <h2>{announcements.date}</h2>
@@ -9,6 +11,7 @@ const AnnouncementScreen = ( {announcements} ) => {
                 </div>
              ))
             }
+            </div>
         </div>
     );
 }
