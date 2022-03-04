@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
+.App{
+    font-family: "Quicksand";
+}
 .announcements h1 {
     color: #1929b3;
     font-family: "Quicksand";
@@ -30,23 +32,64 @@
     margin: 3px;
     background-color:#5796f3;
     border:2px solid black;
-    padding-left: 200px;
-    padding-right: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 .room1{
     padding: 20px;
-    align-items: left;
+    text-align: left;
     max-width: 1500px;
     margin: 0 auto;
     text-decoration: none;
 }
 
-.room-info{
-    align-items: center;
+.room-info h1{
+    text-align: center;
 }
+.room-info h2{
+    text-align: center;
+}
+.room-info image{
+    text-align: center;
+}
+
+  .mybookings a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  .mybookings a:hover {
+    color: #1929b3;
+    box-shadow: #000000;
+  }
+
+  .App{
+      text-align: center;
+  }
+
+  .App a{
+      text-decoration: none;
+  }
+
+  .room-info a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  .room-info a:hover {
+    color: #1929b3;
+    box-shadow: #000000;
+  }
+
+  .mybookings h1{
+    text-align: center;
+  }
+
+.roomlisting{
+    text-align: center;
+}
+
 
 
 

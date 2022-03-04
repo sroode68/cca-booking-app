@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 const Room1 = () => {
     return(
         <div className="room-info">
-            <Link to="/" >Home</Link>
+           <Link to="/" style={{
+                  color: 'white', 
+                  backgroundColor: '#1929b3',
+                  borderRadius: '8px'
+            }
+            }>Home</Link>
             <h1>Room 1</h1>
             <h2>The room connecting to the main hallway</h2>
             <img src="http://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/209/2017/08/03065505/851.png" alt="hse logo" width="800" height="500"></img>

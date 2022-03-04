@@ -5,6 +5,7 @@ import Room1 from './Room1';
 import Room2 from './Room2';
 import Room3 from './Room3';
 import Room4 from './Room4';
+import MyBookings from './MyBookings';
 
 function App() {
 
@@ -26,7 +27,10 @@ function App() {
           </Route> 
           <Route path ="/room4">
             <Room4/>
-          </Route>           
+          </Route>
+          <Route path ="/mybookings">
+            <MyBookings/>
+          </Route>             
         </Switch>
       </div>
     </Router>
