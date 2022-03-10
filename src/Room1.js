@@ -1,6 +1,39 @@
 import { Link } from "react-router-dom";
-
+import React, { useEffect, useState } from 'react'
+import axios from "axios";
 const Room1 = () => {
+    
+    const [showButton, setShowButton] = useState(true)
+
+    const updateTime = (time, room) => {
+        const url = "http://localhost:7000/RoomTimes/"+ time;
+        axios.put(url, false).then(response =>{
+          console.log("Update successful")
+        })
+    }
+
+    useEffect(() => {
+        fetch('http://localhost:7000/RoomTimes')
+          .then((response) => response.json())
+          .then((response) => {
+            console.log(response['room1'].Nine)
+            if(response === true){
+              setShowButton(true)
+            } 
+            if(response === false){
+              setShowButton(false);
+            }
+
+            if(response.Ten === true){
+                setShowButton(true)
+              } 
+              if(response.Ten === false){
+                setShowButton(false);
+              }
+              
+          })
+      }, []);
+
     return(
         <div className="room-info">
            <Link to="/" style={{
@@ -22,6 +55,16 @@ const Room1 = () => {
             </ul>
             <div className="timeslot">
               
+            </div>
+            <div className="timeslots">
+                <h1>Book a time!</h1>
+                {showButton && <button onClick={updateTime("Nine", "room1")}>9:00</button>}
+                {showButton && <button onClick={updateTime("Ten", "room1")}>10:00</button>}
+                <button>11:00 AM</button>
+                <button>12:00 PM</button>
+                <button>1:00 PM</button>
+                <button>2:00 PM</button>
+                <button>3:00 PM</button>
             </div>
         </div>
     );

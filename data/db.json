@@ -1,9 +1,49 @@
 {
-  "announcements": [
-      {
-          "date": "2/25/2022",
-          "body": "The CCA study rooms will be closing early at 2:30 PM on Friday February 25th",
-          "id": "1"
-      }
-  ]
+  "RoomTimes": 
+    {
+      "room1": [
+        {
+          "Nine": false,
+          "Ten": true,
+          "Eleven": true,
+          "Twelve": true,
+          "One": true,
+          "Two": true,
+          "Three": true
+        }
+      ],
+      "room2": [
+        {
+          "Nine": false,
+          "Ten": true,
+          "Eleven": true,
+          "Twelve": true,
+          "One": true,
+          "Two": true,
+          "Three": true
+        }
+      ],
+      "room3": [
+        {
+          "Nine": false,
+          "Ten": true,
+          "Eleven": true,
+          "Twelve": true,
+          "One": true,
+          "Two": true,
+          "Three": true
+        }
+      ],
+      "room4": [
+        {
+          "Nine": false,
+          "Ten": true,
+          "Eleven": true,
+          "Twelve": true,
+          "One": true,
+          "Two": true,
+          "Three": true
+        }
+      ]
+    }
 }
