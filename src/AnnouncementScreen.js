@@ -4,13 +4,9 @@ const AnnouncementScreen = ( {announcements} ) => {
         <div className='announcements'>
             <h1>Announcements:</h1>
             <div className='announcement-listing'>
-            {announcements.map((announcements) => (
-                <div>
-                    <h2>{announcements.date}</h2>
-                    <h3>{announcements.body}</h3>
-                </div>
-             ))
-            }
+                <h1>"2/25/2022"</h1>
+                <h1>The CCA study rooms will be closing early at 2:30 PM on Friday February 25th</h1>
+            
             </div>
         </div>
     );

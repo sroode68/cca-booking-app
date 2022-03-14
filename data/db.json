@@ -3,7 +3,7 @@
     {
       "room1": [
         {
-          "Nine": false,
+          "Nine": true,
           "Ten": true,
           "Eleven": true,
           "Twelve": true,

@@ -3,34 +3,73 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 const Room1 = () => {
     
-    const [showButton, setShowButton] = useState(true)
+    const [showButton9, setShowButton9] = useState(true)
+    const [showButton10, setShowButton10] = useState(true)
+    const [showButton11, setShowButton11] = useState(true)
+    const [showButton12, setShowButton12] = useState(true)
+    const [showButton1, setShowButton1] = useState(true)
+    const [showButton2, setShowButton2] = useState(true)
+    const [showButton3, setShowButton3] = useState(true)
 
     const updateTime = (time, room) => {
-        const url = "http://localhost:7000/RoomTimes/"+ time;
-        axios.put(url, false).then(response =>{
-          console.log("Update successful")
-        })
+        const url = "http://localhost:7000/RoomTimes/";
+        //axios.put(url, false)
+       // .then(response =>{
+       //   console.log(response.room1)
+       // })
     }
 
     useEffect(() => {
         fetch('http://localhost:7000/RoomTimes')
           .then((response) => response.json())
           .then((response) => {
-            console.log(response['room1'].Nine)
-            if(response === true){
-              setShowButton(true)
+            console.log(response.room1[0].Nine)
+            console.log(response.room1[0].Ten)
+            if(response.room1[0].Nine === true){
+              setShowButton9(true)
             } 
-            if(response === false){
-              setShowButton(false);
+            if(response.room1[0].Nine === false){
+              setShowButton9(false);
             }
 
-            if(response.Ten === true){
-                setShowButton(true)
-              } 
-              if(response.Ten === false){
-                setShowButton(false);
-              }
-              
+            if(response.room1[0].Ten === true){
+                setShowButton10(true)
+            } 
+            if(response.room1[0].Ten === false){
+              setShowButton10(false);
+            }
+            if(response.room1[0].Eleven === true){
+              setShowButton11(true)
+            } 
+            if(response.room1[0].Eleven === false){
+              setShowButton11(false);
+            }
+
+            if(response.room1[0].Twelve === true){
+                setShowButton12(true)
+            } 
+            if(response.room1[0].Twelve === false){
+              setShowButton12(false);
+            } 
+            if(response.room1[0].One === true){
+              setShowButton1(true)
+          } 
+          if(response.room1[0].One === false){
+            setShowButton1(false);
+          }
+          if(response.room1[0].Two === true){
+            setShowButton2(true)
+          } 
+          if(response.room1[0].Two === false){
+            setShowButton2(false);
+          }
+
+          if(response.room1[0].Three === true){
+              setShowButton3(true)
+          } 
+          if(response.room1[0].Three === false){
+            setShowButton3(false);
+          }             
           })
       }, []);
 
@@ -58,13 +97,13 @@ const Room1 = () => {
             </div>
             <div className="timeslots">
                 <h1>Book a time!</h1>
-                {showButton && <button onClick={updateTime("Nine", "room1")}>9:00</button>}
-                {showButton && <button onClick={updateTime("Ten", "room1")}>10:00</button>}
-                <button>11:00 AM</button>
-                <button>12:00 PM</button>
-                <button>1:00 PM</button>
-                <button>2:00 PM</button>
-                <button>3:00 PM</button>
+                {showButton9 && <button onClick={updateTime("Nine", "room1")}>9:00</button>}
+                {showButton10 && <button onClick={updateTime("Ten", "room1")}>10:00</button>}
+                {showButton11 && <button onClick={updateTime("Eleven", "room1")}>11:00</button>}
+                {showButton12 && <button onClick={updateTime("Twelve", "room1")}>12:00</button>}
+                {showButton1 && <button onClick={updateTime("One", "room1")}>1:00</button>}
+                {showButton2 && <button onClick={updateTime("Two", "room1")}>2:00</button>}
+                {showButton3 && <button onClick={updateTime("Three", "room1")}>3:00</button>}
             </div>
         </div>
     );
