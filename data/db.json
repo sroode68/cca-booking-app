@@ -1,49 +1,44 @@
 {
-  "RoomTimes": 
+  "Rooms": [
     {
-      "room1": [
-        {
-          "Nine": true,
-          "Ten": true,
-          "Eleven": true,
-          "Twelve": true,
-          "One": true,
-          "Two": true,
-          "Three": true
-        }
-      ],
-      "room2": [
-        {
-          "Nine": false,
-          "Ten": true,
-          "Eleven": true,
-          "Twelve": true,
-          "One": true,
-          "Two": true,
-          "Three": true
-        }
-      ],
-      "room3": [
-        {
-          "Nine": false,
-          "Ten": true,
-          "Eleven": true,
-          "Twelve": true,
-          "One": true,
-          "Two": true,
-          "Three": true
-        }
-      ],
-      "room4": [
-        {
-          "Nine": false,
-          "Ten": true,
-          "Eleven": true,
-          "Twelve": true,
-          "One": true,
-          "Two": true,
-          "Three": true
-        }
-      ]
+      "id": "room1",
+      "Nine": true,
+      "Ten": true,
+      "Eleven": true,
+      "Twelve": true,
+      "One": true,
+      "Two": true,
+      "Three": true
+    },
+    {
+      "id": "room2",
+      "Nine": true,
+      "Ten": true,
+      "Eleven": true,
+      "Twelve": true,
+      "One": true,
+      "Two": true,
+      "Three": true
+    },
+    {
+      "id": "room3",
+      "Nine": true,
+      "Ten": true,
+      "Eleven": true,
+      "Twelve": true,
+      "One": true,
+      "Two": true,
+      "Three": true
+    },
+    {
+      "id": "room4",
+      "Nine": true,
+      "Ten": true,
+      "Eleven": true,
+      "Twelve": true,
+      "One": true,
+      "Two": true,
+      "Three": true
     }
+  ]
 }
