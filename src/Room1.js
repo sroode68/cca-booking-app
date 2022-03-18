@@ -12,7 +12,129 @@ const Room1 = () => {
     const [showButton3, setShowButton3] = useState(true)
 
     const updateTime9 = (room) => {
-        //axios.put(url,(setShowButton9(false)))
+        setShowButton9(false)
+        var timeInfo = {
+            "Nine": false,
+            "Ten": showButton10,
+            "Eleven": showButton11,
+            "Twelve": showButton12,
+            "One": showButton1,
+            "Two": showButton2,
+            "Three": showButton3
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton9) 
+       }
+       )
+    }
+
+    const updateTime10 = (room) => {
+        setShowButton10(false)
+        var timeInfo = {
+            "Nine": showButton9,
+            "Ten": false,
+            "Eleven": showButton11,
+            "Twelve": showButton12,
+            "One": showButton1,
+            "Two": showButton2,
+            "Three": showButton3
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton10) 
+       }
+       )
+    }
+
+    const updateTime11 = (room) => {
+        setShowButton11(false)
+        var timeInfo = {
+            "Nine": showButton9,
+            "Ten": showButton10,
+            "Eleven": false,
+            "Twelve": showButton12,
+            "One": showButton1,
+            "Two": showButton2,
+            "Three": showButton3
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton11) 
+       }
+       )
+    }
+
+    const updateTime12 = (room) => {
+        setShowButton12(false)
+        var timeInfo = {
+            "Nine": showButton9,
+            "Ten": showButton10,
+            "Eleven": showButton11,
+            "Twelve": false,
+            "One": showButton1,
+            "Two": showButton2,
+            "Three": showButton3
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton12) 
+       }
+       )
+    }
+
+    const updateTime1 = (room) => {
+        setShowButton1(false)
+        var timeInfo = {
+            "Nine": showButton9,
+            "Ten": showButton10,
+            "Eleven": showButton11,
+            "Twelve": showButton12,
+            "One": false,
+            "Two": showButton2,
+            "Three": showButton3
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton1) 
+       }
+       )
+    }
+
+    const updateTime2 = (room) => {
+        setShowButton2(false)
+        var timeInfo = {
+            "Nine": showButton9,
+            "Ten": showButton10,
+            "Eleven": showButton11,
+            "Twelve": showButton12,
+            "One": showButton1,
+            "Two": false,
+            "Three": showButton3
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton2) 
+       }
+       )
+    }
+
+    const updateTime3 = (room) => {
+        setShowButton3(false)
+        var timeInfo = {
+            "Nine": showButton9,
+            "Ten": showButton10,
+            "Eleven": showButton11,
+            "Twelve": showButton12,
+            "One": showButton1,
+            "Two": showButton2,
+            "Three": false
+        };
+       const url = "http://localhost:7000/Rooms/"+room;
+       axios.put(url, timeInfo).then(response =>{
+          console.log(showButton3) 
+       }
+       )
     }
 
     const getTimes = (room) => {
@@ -56,13 +178,13 @@ const Room1 = () => {
             </div>
             <div className="timeslots">
                 <h1>Book a time!</h1>
-                {showButton9 && <button onClick={updateTime9("room1")}>9:00</button>}
-                {showButton10 && <button>10:00</button>}
-                {showButton11 && <button>11:00</button>}
-                {showButton12 && <button>12:00</button>}
-                {showButton1 && <button>1:00</button>}
-                {showButton2 && <button>2:00</button>}
-                {showButton3 && <button>3:00</button>}
+                {showButton9 && <button onClick={() => {updateTime9("room1")}}>9:00</button>}
+                {showButton10 && <button onClick={() => {updateTime10("room1")}}>10:00</button>}
+                {showButton11 && <button onClick={() => {updateTime11("room1")}}>11:00</button>}
+                {showButton12 && <button onClick={() => {updateTime12("room1")}}>12:00</button>}
+                {showButton1 && <button onClick={() => {updateTime1("room1")}}>1:00</button>}
+                {showButton2 && <button onClick={() => {updateTime2("room1")}}>2:00</button>}
+                {showButton3 && <button onClick={() => {updateTime3("room1")}}>3:00</button>}
             </div>
         </div>
     );
