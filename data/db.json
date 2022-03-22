@@ -4,7 +4,7 @@
       "Nine": true,
       "Ten": true,
       "Eleven": true,
-      "Twelve": true,
+      "Twelve": false,
       "One": true,
       "Two": true,
       "Three": true,
@@ -46,7 +46,7 @@
       "Eleven": true,
       "Twelve": true,
       "One": true,
-      "Two": true,
+      "Two": false,
       "Three": true,
       "id": "room5"
     }
