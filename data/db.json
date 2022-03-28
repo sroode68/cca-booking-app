@@ -2,7 +2,7 @@
   "Rooms": [
     {
       "Nine": true,
-      "Ten": true,
+      "Ten": false,
       "Eleven": true,
       "Twelve": false,
       "One": true,

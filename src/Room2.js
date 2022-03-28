@@ -162,7 +162,7 @@ const Room2 = () => {
                   borderRadius: '8px'
             }
             }>Home</Link>
-            <h1>Room 2</h1>
+            <h1>K102B</h1>
             <h2>The room closest to door 18</h2>
             <img src="http://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/209/2017/08/03065505/851.png" alt="hse logo" width="800" height="500"></img>
             <h2>Ammenities Offered:</h2>
