@@ -13,10 +13,10 @@ const MyBookings = () => {
             }
             }>Home</Link>
             <h1>My Reservations:</h1>
-            <h1>{Rooms.room1.Nine}</h1>
+            <h1>{Rooms[0]}</h1>
             {Rooms.map((room) => (
                 <div>
-                    {room.Nine === false ?(
+                    {/*room.Nine === false ?(
                         <div>
                             <h3>Today in  {room} at 9:00AM</h3>
                         </div>
@@ -61,7 +61,7 @@ const MyBookings = () => {
                                 )
                             )
                         )
-                    }
+                     */}
                 </div>
                 ))}
 

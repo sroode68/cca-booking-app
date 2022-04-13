@@ -7,7 +7,7 @@ const RoomListing = () => {
     
     return(
         <div className="roomlisting">
-          <div classname="room1">
+          <div className="room1">
           <h1>K102A:</h1>
             <Link to="room1" style={{ 
             color: 'white', 

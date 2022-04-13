@@ -1,4 +1,4 @@
-//import Announcements from './AnnouncementScreen';
+import Announcements from './AnnouncementScreen';
 import './index.css';
 import RoomListing from './RoomListing';
 //import useFetch from './useFetch'
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="App">
       <h1>CCA Study Room Booking App</h1>
-      {/*{announcements && <Announcements announcements={announcements}/>}*/}
+      {<Announcements/>}
       <div className='mybookingsbutton'>
         <Link to="/mybookings" style={{ 
             color: 'white', 
