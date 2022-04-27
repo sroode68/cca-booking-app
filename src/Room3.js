@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 
 const Room3 = () => {
+
+  //Variables for the timeslot buttons
     const [showButton9, setShowButton9] = useState(true)
     const [showButton10, setShowButton10] = useState(true)
     const [showButton11, setShowButton11] = useState(true)
@@ -11,6 +13,8 @@ const Room3 = () => {
     const [showButton2, setShowButton2] = useState(true)
     const [showButton3, setShowButton3] = useState(true)
 
+
+    //These functions update the timeslots when a user books the time, it makes the timeslot disapear (time is false on database) as well as updateing the other times
     const updateTime9 = (room) => {
         setShowButton9(false)
         var timeInfo = {
@@ -137,6 +141,7 @@ const Room3 = () => {
        )
     }
 
+    //Fetches all of the timeslots when a user opens the page
     const getTimes = (room) => {
       const url = "http://localhost:7000/Rooms/"+room;
       axios.get(url).then(response=>{
@@ -150,11 +155,13 @@ const Room3 = () => {
     })
     }
 
+    //Constantly fetches timeslots everytime the page is refreshed
     useEffect(() => {
         getTimes("room3")             
     }, []);
 
     return(
+        //Styling design of the room page (ammenities, name, location, etc)
         <div className="room-info">
            <Link to="/" style={{
                   color: 'white', 
@@ -174,6 +181,7 @@ const Room3 = () => {
                 <li>Whiteboard wall with markers</li>
             </ul>
             <div className="timeslot">
+                {/*Timeslot list*/}
                 {showButton9 && <button onClick={() => {updateTime9("room3")}}>9:00</button>}
                 {showButton10 && <button onClick={() => {updateTime10("room3")}}>10:00</button>}
                 {showButton11 && <button onClick={() => {updateTime11("room3")}}>11:00</button>}

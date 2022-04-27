@@ -11,6 +11,7 @@ import MyBookings from './MyBookings';
 function App() {
 
   return (
+    //A route for each component so the user can go between pages
     <Router>
       <div className='App'>
         <Switch>

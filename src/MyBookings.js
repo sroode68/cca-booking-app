@@ -1,8 +1,12 @@
+
 import { Link } from "react-router-dom";
-import useFetch from "./useFetch";
+import useFetch from './useFetch';
 
 const MyBookings = () => {
-    const {data: Rooms} = useFetch('http://localhost:7000/Rooms');
+
+    const {data: rooms, error, isLoading} = useFetch("http://localhost:7000/Rooms/")
+    if (isLoading) return "Loading...";
+    if(error) return "Error";
 
     return(
         <div className="mybookings">
@@ -13,42 +17,44 @@ const MyBookings = () => {
             }
             }>Home</Link>
             <h1>My Reservations:</h1>
-            <h1>{Rooms[0]}</h1>
-            {Rooms.map((room) => (
+            {/*rooms && <h1>{rooms.Nine.toString()}</h1>*/}
+            { rooms &&
+            rooms.map((room) => (
                 <div>
-                    {/*room.Nine === false ?(
+                    {console.log({rooms})}
+                    {room.Nine.toString() === false ?(
                         <div>
-                            <h3>Today in  {room} at 9:00AM</h3>
+                            <h3>Today in  {room.name} at 9:00AM</h3>
                         </div>
                     ) : (
-                        room.Ten === false ?(
+                        room.Ten.toString() === false ?(
                             <div>
-                                <h3>Today in  {room} at 10:00AM</h3>
+                                <h3>Today in  {room.name} at 10:00AM</h3>
                             </div>
                         ) : (
-                            room.Eleven === false?(
+                            room.Eleven.toString() === false?(
                                 <div>
-                                    <h3>Today in  {room} at 11:00AM</h3>
+                                    <h3>Today in  {room.name} at 11:00AM</h3>
                                 </div>
                             ) : (
-                                room.Twelve === false?(
+                                room.Twelve.toString() === false?(
                                     <div>
-                                        <h3>Today in  {room} at 12:00PM</h3>
+                                        <h3>Today in  {room.name} at 12:00PM</h3>
                                     </div>
                                 ) : (
-                                    room.One === false?(
+                                    room.One.toString() === false?(
                                         <div>
-                                            <h3>Today in  {room} at 1:00PM</h3>
+                                            <h3>Today in  {room.name} at 1:00PM</h3>
                                         </div>
                                     ) : (
-                                        room.Two === false?(
+                                        room.Two.toString() === false?(
                                             <div>
-                                                <h3>Today in  {room} at 2:00PM</h3>
+                                                <h3>Today in  {room.name} at 2:00PM</h3>
                                             </div>
                                         ) : (
-                                            room.Three === false?(
+                                            room.Three.toString() === false?(
                                                 <div>
-                                                    <h3>Today in  {room} at 3:00PM</h3>
+                                                    <h3>Today in  {room.name} at 3:00PM</h3>
                                                 </div>
                                             ) : (
                                                 <div>
@@ -61,9 +67,9 @@ const MyBookings = () => {
                                 )
                             )
                         )
-                     */}
+                     }
                 </div>
-                ))}
+                    ))}
 
         </div>  
     );

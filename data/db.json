@@ -5,10 +5,11 @@
       "Ten": false,
       "Eleven": false,
       "Twelve": false,
-      "One": true,
+      "One": false,
       "Two": false,
       "Three": true,
-      "id": "room1"
+      "id": "room1",
+      "name": "K102A"
     },
     {
       "Nine": true,
@@ -18,7 +19,8 @@
       "One": true,
       "Two": true,
       "Three": true,
-      "id": "room2"
+      "id": "room2",
+      "name": "K102B"
     },
     {
       "Nine": true,
@@ -28,7 +30,8 @@
       "One": true,
       "Two": true,
       "Three": true,
-      "id": "room3"
+      "id": "room3",
+      "name": "K101A"
     },
     {
       "Nine": true,
@@ -38,17 +41,19 @@
       "One": false,
       "Two": true,
       "Three": true,
-      "id": "room4"
+      "id": "room4",
+      "name": "K101B"
     },
     {
-      "Nine": true,
-      "Ten": true,
-      "Eleven": true,
-      "Twelve": true,
-      "One": true,
+      "Nine": false,
+      "Ten": false,
+      "Eleven": false,
+      "Twelve": false,
+      "One": false,
       "Two": false,
-      "Three": true,
-      "id": "room5"
+      "Three": false,
+      "id": "room5",
+      "name": "K101C"
     }
   ]
 }

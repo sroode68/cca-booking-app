@@ -1,13 +1,12 @@
 import Announcements from './AnnouncementScreen';
 import './index.css';
 import RoomListing from './RoomListing';
-//import useFetch from './useFetch'
 import { Link } from "react-router-dom";
 
-//npx json-server --watch data/db.json --port 7000
+//Run the command to start up the server: npx json-server --watch data/db.json --port 7000
 const Home = () => {
-  //const {data: Rooms} = useFetch('http://localhost:7000/Rooms');
   return (
+    //Compilation of react components to form the home screen
     <div className="App">
       <h1>CCA Study Room Booking App</h1>
       {<Announcements/>}

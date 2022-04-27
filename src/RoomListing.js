@@ -6,6 +6,7 @@ import './index.css';
 const RoomListing = () => {
     
     return(
+      //Lists all 5 rooms that the user can click on for more information
         <div className="roomlisting">
           <div className="room1">
           <h1>K102A:</h1>
