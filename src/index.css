@@ -2,6 +2,8 @@
 .App{
     font-family: "Quicksand";
 }
+
+/*Announcement CSS*/
 .announcements h1 {
     color: #1929b3;
     font-family: "Quicksand";
@@ -36,6 +38,7 @@
     padding-bottom: 5px;
 }
 
+/*Room info CSS*/
 .room1{
     padding: 20px;
     text-align: left;

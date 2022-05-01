@@ -1,6 +1,6 @@
 const AnnouncementScreen = () => {
     return(
-        
+        //Each announcement object has a date and description
         <div className='announcements'>
             <h1>Announcements:</h1>
             <div className='announcement-listing'>

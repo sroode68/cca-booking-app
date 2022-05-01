@@ -15,7 +15,11 @@ const Room5 = () => {
 
 //These functions update the timeslots when a user books the time, it makes the timeslot disapear (time is false on database) as well as updateing the other times
     const updateTime9 = (room) => {
+
+        //Hides the 9:00 button after being clicked
         setShowButton9(false)
+
+        //Updates the database to display false after being clicked to signifiy it's booked
         var timeInfo = {
             "Nine": false,
             "Ten": showButton10,
@@ -27,6 +31,8 @@ const Room5 = () => {
             "id": room,
             "name": "K101C"
         };
+
+        //Sends it to the json server via axios
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
           console.log(showButton9) 
@@ -34,6 +40,7 @@ const Room5 = () => {
        )
     }
 
+    //Same thing as the function above just for the 10:00 times etc, etc. Repeat for all updateTime functions
     const updateTime10 = (room) => {
         setShowButton10(false)
         var timeInfo = {
@@ -181,6 +188,7 @@ const Room5 = () => {
                   backgroundColor: '#1929b3',
                   borderRadius: '8px'
             }
+            //Room info
             }>Home</Link>
             <h1>K101C</h1>
             <h2>Room closest to door 18</h2>

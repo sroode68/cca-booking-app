@@ -23,6 +23,7 @@ const useFetch = (url) => {
           setData(data);
           setError(null);
         })
+        //If error is caught
         .catch(err => {
           if (err.name === 'AbortError') {
             console.log('fetch aborted')
@@ -37,7 +38,8 @@ const useFetch = (url) => {
      
       return () => abortCont.abort();
     }, [url])
-  
+    
+    //Returns the data along with isLoading and error
     return { data, isLoading, error };
   }
 

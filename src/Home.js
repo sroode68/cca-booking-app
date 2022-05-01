@@ -9,7 +9,9 @@ const Home = () => {
     //Compilation of react components to form the home screen
     <div className="App">
       <h1>CCA Study Room Booking App</h1>
+      {/*Announcement component*/}
       {<Announcements/>}
+      {/*My Bookings component*/}
       <div className='mybookingsbutton'>
         <Link to="/mybookings" style={{ 
             color: 'white', 
@@ -18,9 +20,11 @@ const Home = () => {
             fontSize: '50px',
           }}>My Bookings</Link>
       </div>
+      {/*Room Listing component*/}
       <RoomListing/>
     </div>
   );
 }
 
 export default Home;
+
