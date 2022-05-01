@@ -23,7 +23,9 @@ const Room2 = () => {
             "Twelve": showButton12,
             "One": showButton1,
             "Two": showButton2,
-            "Three": showButton3
+            "Three": showButton3,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -41,7 +43,9 @@ const Room2 = () => {
             "Twelve": showButton12,
             "One": showButton1,
             "Two": showButton2,
-            "Three": showButton3
+            "Three": showButton3,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -59,7 +63,9 @@ const Room2 = () => {
             "Twelve": showButton12,
             "One": showButton1,
             "Two": showButton2,
-            "Three": showButton3
+            "Three": showButton3,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -77,7 +83,9 @@ const Room2 = () => {
             "Twelve": false,
             "One": showButton1,
             "Two": showButton2,
-            "Three": showButton3
+            "Three": showButton3,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -95,7 +103,9 @@ const Room2 = () => {
             "Twelve": showButton12,
             "One": false,
             "Two": showButton2,
-            "Three": showButton3
+            "Three": showButton3,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -113,7 +123,9 @@ const Room2 = () => {
             "Twelve": showButton12,
             "One": showButton1,
             "Two": false,
-            "Three": showButton3
+            "Three": showButton3,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -131,7 +143,9 @@ const Room2 = () => {
             "Twelve": showButton12,
             "One": showButton1,
             "Two": showButton2,
-            "Three": false
+            "Three": false,
+            "id": room,
+            "name": "K102B"
         };
        const url = "http://localhost:7000/Rooms/"+room;
        axios.put(url, timeInfo).then(response =>{
@@ -180,7 +194,7 @@ const Room2 = () => {
                 <li>Whiteboard wall with markers</li>
             </ul>
             <div className="timeslot">
-                {/*Timeslot list*/}
+                {/*Timeslot list when clicked starts up the update time function*/}
             <h1>Book a time!</h1>
                 {showButton9 && <button onClick={() => {updateTime9("room2")}}>9:00</button>}
                 {showButton10 && <button onClick={() => {updateTime10("room2")}}>10:00</button>}
